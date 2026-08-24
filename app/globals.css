@@ -1,0 +1,825 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* BIG BULL Premium Hero Animation */
+
+.hero-product-image {
+  animation: bigBullHeroReveal 1.2s ease-out both;
+  transition: transform 0.5s ease;
+}
+
+.hero-product-image:hover {
+  transform: scale(1.035);
+}
+
+@keyframes bigBullHeroReveal {
+  from {
+    opacity: 0;
+    transform: scale(0.92);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+/* BIG BULL Hero Text Animations */
+
+.hero-title {
+  animation: heroTextUp 0.8s ease-out 0.15s both;
+}
+
+.hero-tagline {
+  animation: heroTextUp 0.8s ease-out 0.35s both;
+}
+
+.hero-description {
+  animation: heroTextUp 0.8s ease-out 0.55s both;
+}
+
+.hero-buttons {
+  animation: heroTextUp 0.8s ease-out 0.75s both;
+}
+
+@keyframes heroTextUp {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ================================
+   PREMIUM HERO BUTTONS
+================================ */
+
+.premium-btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 230px;
+  padding: 17px 34px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 15px;
+  letter-spacing: 1.2px;
+  overflow: hidden;
+  cursor: pointer;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    background 0.3s ease;
+}
+
+/* SHOP NOW */
+.shop-btn {
+  color: white;
+  background: linear-gradient(135deg, #b81e2d, #e52f3d);
+  box-shadow: 0 8px 25px rgba(184, 30, 45, 0.28);
+}
+
+/* Moving shine */
+.shop-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -120%;
+  width: 70%;
+  height: 100%;
+  background: linear-gradient(
+    100deg,
+    transparent,
+    rgba(255, 255, 255, 0.35),
+    transparent
+  );
+  transform: skewX(-20deg);
+  animation: buttonShine 3s infinite;
+}
+
+.shop-btn .arrow {
+  margin-left: 9px;
+  font-size: 20px;
+  transition: transform 0.3s ease;
+}
+
+/* Dealer button */
+.dealer-btn {
+  color: #d4af37;
+  background: rgba(0, 0, 0, 0.35);
+  border: 1px solid #d4af37;
+  box-shadow: 0 0 0 rgba(212, 175, 55, 0);
+}
+
+/* Gold glow animation */
+.dealer-btn {
+  animation: goldPulse 2.5s infinite;
+}
+
+/* Hover */
+.premium-btn:hover {
+  transform: translateY(-4px) scale(1.02);
+}
+
+.shop-btn:hover {
+  box-shadow: 0 14px 35px rgba(184, 30, 45, 0.5);
+}
+
+.shop-btn:hover .arrow {
+  transform: translateX(6px);
+}
+
+.dealer-btn:hover {
+  background: linear-gradient(
+    135deg,
+    rgba(212, 175, 55, 0.12),
+    rgba(212, 175, 55, 0.03)
+  );
+  box-shadow:
+    0 0 15px rgba(212, 175, 55, 0.35),
+    inset 0 0 15px rgba(212, 175, 55, 0.05);
+}
+
+/* Shine animation */
+@keyframes buttonShine {
+  0% {
+    left: -120%;
+  }
+
+  45%,
+  100% {
+    left: 140%;
+  }
+}
+
+/* Gold breathing glow */
+@keyframes goldPulse {
+  0%,
+  100% {
+    box-shadow: 0 0 0 rgba(212, 175, 55, 0);
+  }
+
+  50% {
+    box-shadow:
+      0 0 18px rgba(212, 175, 55, 0.22),
+      0 0 35px rgba(212, 175, 55, 0.08);
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .premium-btn {
+    width: 100%;
+    min-width: 0;
+  }
+}
+
+/* ================================
+   ONLINE ORDER PREMIUM BUTTONS
+================================ */
+
+.online-orders {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 28px;
+}
+
+.online-order-btn {
+  position: relative;
+  min-width: 155px;
+  height: 50px;
+  padding: 0 24px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+
+  border-radius: 8px;
+  border: 1px solid rgba(212, 175, 55, 0.55);
+
+  color: #fff;
+  background: rgba(15, 15, 15, 0.85);
+
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1px;
+
+  overflow: hidden;
+  cursor: pointer;
+
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    border-color 0.35s ease;
+}
+
+/* Moving shine */
+.online-order-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -130%;
+
+  width: 65%;
+  height: 100%;
+
+  background: linear-gradient(
+    100deg,
+    transparent,
+    rgba(255, 255, 255, 0.35),
+    transparent
+  );
+
+  transform: skewX(-20deg);
+}
+
+.online-order-btn:hover::before {
+  animation: orderShine 0.7s ease forwards;
+}
+
+/* Hover lift */
+.online-order-btn:hover {
+  transform: translateY(-5px) scale(1.03);
+  border-color: #d4af37;
+}
+
+/* AMAZON */
+.amazon-order:hover {
+  background: linear-gradient(135deg, #ff9900, #ffb347);
+  color: #111;
+  box-shadow: 0 10px 30px rgba(255, 153, 0, 0.35);
+}
+
+/* FLIPKART */
+.flipkart-order:hover {
+  background: linear-gradient(135deg, hsl(55, 87%, 53%), #e2da37);
+  box-shadow: 0 10px 30px rgba(40, 116, 240, 0.35);
+}
+
+/* MEESHO */
+.meesho-order:hover {
+  background: linear-gradient(135deg, #f43397, #ff70b7);
+  box-shadow: 0 10px 30px rgba(244, 51, 151, 0.35);
+}
+
+/* INSTAGRAM */
+.instagram-order:hover {
+  background: linear-gradient(
+    135deg,
+    #833ab4,
+    #fd1d1d,
+    #fcb045
+  );
+  box-shadow: 0 10px 30px rgba(225, 48, 108, 0.4);
+}
+
+/* Icon animation */
+.order-icon {
+  font-size: 18px;
+  transition: transform 0.35s ease;
+}
+
+.online-order-btn:hover .order-icon {
+  transform: scale(1.25) rotate(-5deg);
+}
+
+/* Shine */
+@keyframes orderShine {
+  from {
+    left: -130%;
+  }
+
+  to {
+    left: 140%;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .online-orders {
+    gap: 10px;
+  }
+
+  .online-order-btn {
+    min-width: 140px;
+    height: 46px;
+    padding: 0 16px;
+    font-size: 11px;
+  }
+}
+/* ===== PREMIUM BIG BULL ANIMATED BACKGROUND ===== */
+
+body {
+  background: #050505;
+  color: white;
+}
+
+/* Main animated background */
+.premium-bg {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  background:
+    radial-gradient(circle at 75% 25%, rgba(212, 175, 55, 0.16), transparent 28%),
+    radial-gradient(circle at 15% 65%, rgba(255, 70, 45, 0.12), transparent 30%),
+    radial-gradient(circle at 50% 100%, rgba(30, 120, 180, 0.10), transparent 35%),
+    #050505;
+}
+
+/* Moving glow */
+.premium-bg::before {
+  content: "";
+  position: absolute;
+  inset: -30%;
+  z-index: -2;
+
+  background:
+    radial-gradient(
+      circle at 30% 40%,
+      rgba(212, 175, 55, 0.16),
+      transparent 22%
+    ),
+    radial-gradient(
+      circle at 70% 60%,
+      rgba(255, 65, 45, 0.12),
+      transparent 24%
+    );
+
+  filter: blur(50px);
+  animation: premiumGlow 14s ease-in-out infinite alternate;
+}
+
+/* Subtle luxury grid */
+.premium-bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+
+  background-image:
+    linear-gradient(rgba(212, 175, 55, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(212, 175, 55, 0.035) 1px, transparent 1px);
+
+  background-size: 70px 70px;
+  mask-image: linear-gradient(to bottom, black, transparent 90%);
+
+  animation: gridMove 18s linear infinite;
+}
+
+/* Floating light */
+.bg-light {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  filter: blur(2px);
+  opacity: 0.55;
+  z-index: -1;
+}
+
+.bg-light-1 {
+  width: 260px;
+  height: 260px;
+  background: radial-gradient(
+    circle,
+    rgba(212, 175, 55, 0.20),
+    transparent 70%
+  );
+  top: 8%;
+  right: 10%;
+  animation: floatLight1 10s ease-in-out infinite;
+}
+
+.bg-light-2 {
+  width: 220px;
+  height: 220px;
+  background: radial-gradient(
+    circle,
+    rgba(255, 70, 45, 0.16),
+    transparent 70%
+  );
+  left: 5%;
+  bottom: 10%;
+  animation: floatLight2 12s ease-in-out infinite;
+}
+
+.bg-light-3 {
+  width: 180px;
+  height: 180px;
+  background: radial-gradient(
+    circle,
+    rgba(80, 170, 255, 0.12),
+    transparent 70%
+  );
+  left: 45%;
+  top: 35%;
+  animation: floatLight3 15s ease-in-out infinite;
+}
+
+
+/* ===== ANIMATIONS ===== */
+
+@keyframes premiumGlow {
+  0% {
+    transform: translate3d(-3%, -2%, 0) scale(1);
+  }
+
+  50% {
+    transform: translate3d(4%, 3%, 0) scale(1.08);
+  }
+
+  100% {
+    transform: translate3d(-2%, 5%, 0) scale(1.15);
+  }
+}
+
+@keyframes gridMove {
+  from {
+    background-position: 0 0, 0 0;
+  }
+
+  to {
+    background-position: 70px 70px, 70px 70px;
+  }
+}
+
+@keyframes floatLight1 {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+
+  50% {
+    transform: translate(-60px, 45px) scale(1.15);
+  }
+}
+
+@keyframes floatLight2 {
+  0%, 100% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(70px, -50px) scale(1.12);
+  }
+}
+
+@keyframes floatLight3 {
+  0%, 100% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(-40px, 60px) scale(1.18);
+  }
+}
+
+
+/* Respect reduced-motion settings */
+@media (prefers-reduced-motion: reduce) {
+  .premium-bg::before,
+  .premium-bg::after,
+  .bg-light {
+    animation: none;
+  }
+}
+
+/* =================================
+   BIG BULL ENTRY CONFIRMATION
+================================= */
+
+.entry-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 999999;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background:
+    radial-gradient(
+      circle at 50% 40%,
+      rgba(30, 1, 4, 0.899),
+      transparent 45%
+    ),
+    #720202;
+
+  overflow: hidden;
+
+  animation: entryFadeIn 0.5s ease;
+}
+
+.entry-card {
+  position: relative;
+  z-index: 2;
+
+  width: min(520px, calc(100% - 40px));
+
+  padding: 55px 45px;
+
+  text-align: center;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(12, 9, 1, 0.96),
+      rgba(8, 8, 8, 0.98)
+    );
+
+  border: 1px solid rgba(212, 175, 55, 0.55);
+  border-radius: 14px;
+
+  box-shadow:
+    0 30px 80px rgba(0, 0, 0, 0.8),
+    0 0 50px rgba(212, 175, 55, 0.08);
+
+  animation: entryCardIn 0.7s ease;
+}
+
+.entry-logo {
+  color: #fff;
+
+  font-size: 38px;
+  font-weight: 900;
+  letter-spacing: 2px;
+}
+
+.entry-logo span {
+  color: #d92835;
+}
+
+.entry-logo sup {
+  color: #d4af37;
+  font-size: 9px;
+}
+
+.entry-line {
+  width: 100px;
+  height: 2px;
+
+  margin: 18px auto 12px;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      #d4af37,
+      transparent
+    );
+
+  animation: entryLine 2s ease-in-out infinite;
+}
+
+.entry-tagline {
+  margin: 0 0 28px;
+
+  color: #d4af37;
+
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 5px;
+}
+
+.entry-card h1 {
+  margin: 0 0 14px;
+
+  color: #fff;
+
+  font-size: 27px;
+  font-weight: 800;
+}
+
+.entry-message {
+  max-width: 400px;
+
+  margin: 0 auto 30px;
+
+  color: rgba(255, 255, 255, 0.72);
+
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.entry-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+
+  margin-top: 10px;
+}
+
+.entry-enter,
+.entry-exit {
+  min-width: 175px;
+  padding: 14px 20px;
+
+  border-radius: 6px;
+
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1px;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    background 0.3s ease;
+}
+
+.entry-enter {
+  color: #f8da49;
+
+  border: 1px solid #d4af37;
+
+  background:
+    linear-gradient(
+      135deg,
+      #140607,
+      #131111
+    );
+
+  box-shadow:
+    0 8px 25px rgba(190, 25, 40, 0.25);
+}
+
+.entry-enter span {
+  margin-left: 8px;
+  font-size: 17px;
+
+  transition: transform 0.3s ease;
+}
+
+.entry-enter:hover {
+  transform: translateY(-4px);
+
+  box-shadow:
+    0 12px 35px rgba(212, 175, 55, 0.3),
+    0 0 20px rgba(212, 175, 55, 0.12);
+}
+
+.entry-enter:hover span {
+  display: inline-block;
+  transform: translateX(5px);
+}
+
+.entry-exit {
+  color: #d4af37;
+
+  border: 1px solid rgba(212, 175, 55, 0.55);
+
+  background: rgba(5, 190, 237, 0.03);
+}
+
+.entry-exit:hover {
+  transform: translateY(-4px);
+
+  color: #f60606;
+
+  background: rgba(212, 175, 55, 0.1);
+
+  box-shadow:
+    0 10px 25px rgba(212, 175, 55, 0.15);
+}
+
+.entry-note {
+  margin: 25px auto 0;
+
+  max-width: 400px;
+
+  color: rgba(255, 255, 255, 0.4);
+
+  font-size: 10px;
+  line-height: 1.6;
+}
+
+.entry-glow {
+  position: absolute;
+
+  border-radius: 50%;
+
+  filter: blur(50px);
+
+  pointer-events: none;
+}
+
+.entry-glow-one {
+  width: 350px;
+  height: 350px;
+
+  top: -150px;
+  right: -100px;
+
+  background: rgba(212, 175, 55, 0.08);
+
+  animation: entryGlowOne 8s ease-in-out infinite alternate;
+}
+
+.entry-glow-two {
+  width: 300px;
+  height: 300px;
+
+  bottom: -120px;
+  left: -100px;
+
+  background: rgba(180, 20, 35, 0.12);
+
+  animation: entryGlowTwo 10s ease-in-out infinite alternate;
+}
+
+@keyframes entryFadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes entryCardIn {
+  from {
+    opacity: 0;
+    transform: translateY(25px) scale(0.97);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes entryLine {
+  0%,
+  100% {
+    opacity: 0.5;
+    transform: scaleX(0.7);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scaleX(1);
+  }
+}
+
+@keyframes entryGlowOne {
+  to {
+    transform: translate(-60px, 70px);
+  }
+}
+
+@keyframes entryGlowTwo {
+  to {
+    transform: translate(70px, -50px);
+  }
+}
+
+@media (max-width: 600px) {
+  .entry-card {
+    padding: 40px 25px;
+  }
+
+  .entry-logo {
+    font-size: 30px;
+  }
+
+  .entry-card h1 {
+    font-size: 23px;
+  }
+
+  .entry-buttons {
+    flex-direction: column;
+  }
+
+  .entry-enter,
+  .entry-exit {
+    width: 100%;
+  }
+}
+
