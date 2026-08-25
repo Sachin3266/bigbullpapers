@@ -182,7 +182,7 @@ export default function Home() {
       </div>
 
       <img
-  src="/hero.jpg.png"
+  src="/hero.png"
   alt="BIG BULL Premium Rolling Papers"
   className="hero-product-image"
   style={{
