@@ -350,7 +350,7 @@ export default function Home() {
       }}
     >
       <img
-        src="/products/product2.jpg.PNG"
+        src="/products/product3.jpg.PNG"
         alt="BIG BULL Rolling Paper"
         style={{
   width: "100%",
@@ -413,7 +413,7 @@ export default function Home() {
       }}
     >
       <img
-        src="/products/product3.jpg.PNG"
+        src="/products/product2.jpg.PNG"
         alt="BIG BULL Pre-Rolled Cones"
         style={{
   width: "100%",
