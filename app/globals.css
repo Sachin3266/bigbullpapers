@@ -22,12 +22,15 @@ body {
 /* BIG BULL Premium Hero Animation */
 
 .hero-product-image {
-  animation: bigBullHeroReveal 1.2s ease-out both;
+  animation: bigBullHeroReveal 1.2s ease-out forwards,
+  floatimages 4s ease-in-out 1.2s infinite;
+
   transition: transform 0.5s ease;
 }
 
 .hero-product-image:hover {
-  transform: scale(1.035);
+  transform: scale(1.035) translateY(-7px)
+
 }
 
 @keyframes bigBullHeroReveal {
@@ -40,6 +43,17 @@ body {
     opacity: 1;
     transform: scale(1);
   }
+}
+@kyframes floatimage {
+  0%, 100% {
+    transform: translateY(0px);
+
+  }
+  50% {
+    transform: translateY(-15px);
+    
+  }
+
 }
 /* BIG BULL Hero Text Animations */
 
