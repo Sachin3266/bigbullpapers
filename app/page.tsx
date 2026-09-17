@@ -155,8 +155,9 @@ export default function Home() {
         position: "relative",
         width: "100%",
         maxWidth: "560px",
+        margin: "0 auto",
         padding: "25px",
-        border: "1px solid rgba(212,175,55,0.25)",
+        border: "4px solid rgba(212,175,55,0.6)",
         background: "rgba(255,255,255,0.025)",
         borderRadius: "18px",
         boxShadow:
