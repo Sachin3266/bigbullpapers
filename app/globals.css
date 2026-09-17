@@ -44,7 +44,7 @@ body {
     transform: scale(1);
   }
 }
-@kyframes floatimage {
+@keyframes floatimage {
   0%, 100% {
     transform: translateY(0px);
 
