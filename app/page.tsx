@@ -640,7 +640,7 @@ export default function Home() {
   <section style={{ textAlign: "center", padding: "60px 20px" }}>
   <h2>Order Online</h2>
 
-  <p>Buy BIG BULL products from your favorite marketplace.</p>
+  <p>Buy BIG BULL products from your favourite marketplace.</p>
 
   <div
     style={{
