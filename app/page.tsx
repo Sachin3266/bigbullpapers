@@ -193,6 +193,7 @@ export default function Home() {
     display: "block",
     borderRadius: "10px",
     objectFit: "contain",
+    flexShrink: 0,
     animation: "floatimage 4s ease-in-out infinite"
   }}
 />
