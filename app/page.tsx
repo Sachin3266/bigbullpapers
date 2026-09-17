@@ -159,7 +159,7 @@ export default function Home() {
         padding: "25px",
         border: "2px solid rgba(212,175,55,0.25)",
         background: "rgba(255,255,255,0.025)",
-        borderRadius: "18px",
+        borderRadius: "20px",
         boxShadow:
           "0 30px 80px rgba(0,0,0,0.7), inset 0 0 40px rgba(184,30,45,0.05)",
       }}
@@ -188,7 +188,7 @@ export default function Home() {
   className="hero-product-image"
   style={{
     width: "125%",
-    maxWidth: "500px",
+    maxWidth: "520px",
     margin: "0 auto",
     display: "block",
     borderRadius: "10px",
