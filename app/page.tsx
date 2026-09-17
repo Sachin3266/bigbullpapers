@@ -187,12 +187,10 @@ export default function Home() {
   alt="BIG BULL Premium Rolling Papers"
   className="hero-product-image"
   style={{
-    width: "100%",
-    display: "flex",
-          justifyContent: "space-between",
-          alignItems: "center",
-    maxWidth: "100px",
+    width: "125%",
+    maxWidth: "500px",
     margin: "0 auto",
+    display: "block",
     borderRadius: "10px",
     objectFit: "contain",
     animation: "floatimage 4s ease-in-out infinite"
