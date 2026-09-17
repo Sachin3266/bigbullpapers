@@ -188,9 +188,11 @@ export default function Home() {
   className="hero-product-image"
   style={{
     width: "100%",
+    display: "flex",
+          justifyContent: "space-between",
+          alignItems: "center",
     maxWidth: "100px",
     margin: "0 auto",
-    display: "block",
     borderRadius: "10px",
     objectFit: "contain",
     animation: "floatimage 4s ease-in-out infinite"
