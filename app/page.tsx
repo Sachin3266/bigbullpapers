@@ -159,7 +159,7 @@ export default function Home() {
         padding: "25px",
         border: "2px solid rgba(212,175,55,0.25)",
         background: "rgba(255,255,255,0.025)",
-        borderRadius: "20px",
+        borderRadius: "18px",
         boxShadow:
           "0 30px 80px rgba(0,0,0,0.7), inset 0 0 40px rgba(184,30,45,0.05)",
       }}
@@ -188,7 +188,7 @@ export default function Home() {
   className="hero-product-image"
   style={{
     width: "125%",
-    maxWidth: "520px",
+    maxWidth: "500px",
     margin: "0 auto",
     display: "block",
     borderRadius: "10px",
@@ -203,8 +203,12 @@ export default function Home() {
           display: "flex",
           justifyContent: "space-between",
           alignItems: "center",
+          flexWrap:"wrap",
+          gap:"10px",
           marginTop: "15px",
           padding: "0 5px",
+          width: "100%",
+          boxSizing: "border-box"
         }}
       >
         <span
