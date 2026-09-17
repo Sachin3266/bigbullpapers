@@ -153,7 +153,7 @@ export default function Home() {
     <div
       style={{
         position: "relative",
-        width: "100%",
+        width: "130%",
         maxWidth: "560px",
         margin: "0 auto",
         padding: "25px",
