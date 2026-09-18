@@ -837,3 +837,24 @@ body {
   }
 }
 
+/* ===== MOBILE HERO IMAGE FIX ===== */
+@media (max-width: 768px) {
+  .hero-product-image {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    object-fit: contain !important;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .hero {
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow: hidden !important;
+  }
+
+  body {
+    overflow-x: hidden !important;
+  }
+}
