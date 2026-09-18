@@ -474,6 +474,67 @@ export default function Home() {
       </a>
     </div>
 
+     <section style={{ textAlign: "center", padding: "60px 20px" }}>
+  <h2>Order Online</h2>
+
+  <p>Buy BIG BULL products from your favourite marketplace.</p>
+
+  <div
+    style={{
+      display: "flex",
+      justifyContent: "center",
+      gap: "15px",
+      flexWrap: "wrap",
+      marginTop: "25px",
+    }}
+  >
+    <a
+      href="https://amzn.in/d/0fh5iIjR"
+      target="_blank"
+      rel="noopener noreferrer"
+    className="online-order-btn amazon-order"
+    >
+      <span className="order-icon">🛒</span>
+      Amazon
+    </a>
+
+    <a
+      href="https://dl.flipkart.com/dl/bigbull-rolling-paper/p/itm26f6911508fa3?pid=RLPHP75VHZHYHNHH"
+      target="_blank"
+      rel="noopener noreferrer"
+    className="online-order-btn flipkart-order"
+  >
+    <span className="order-icon">🛍️</span>
+  
+      Flipkart
+    </a>
+
+    <a
+      href="https://www.meesho.com/BIGBULLPAPERINDUSTRIES"
+      target="_blank"
+      rel="noopener noreferrer"
+    className="online-order-btn meesho-order"
+  >
+    <span className="order-icon">🛍️</span>
+  
+      Meesho
+    </a>
+
+    <a
+      href="https://www.instagram.com/bigbullindustriesofficial"
+      target="_blank"
+    rel="noopener noreferrer"
+    className="online-order-btn instagram-order"
+  >
+    <span className="order-icon">◎</span>
+
+      Instagram
+    </a>
+  </div>
+</section>
+
+
+
     {/* ABOUT BIG BULL */}
 <section
   id="about"
@@ -644,66 +705,7 @@ export default function Home() {
 
 
 
-  <section style={{ textAlign: "center", padding: "60px 20px" }}>
-  <h2>Order Online</h2>
-
-  <p>Buy BIG BULL products from your favourite marketplace.</p>
-
-  <div
-    style={{
-      display: "flex",
-      justifyContent: "center",
-      gap: "15px",
-      flexWrap: "wrap",
-      marginTop: "25px",
-    }}
-  >
-    <a
-      href="https://amzn.in/d/0fh5iIjR"
-      target="_blank"
-      rel="noopener noreferrer"
-    className="online-order-btn amazon-order"
-    >
-      <span className="order-icon">🛒</span>
-      Amazon
-    </a>
-
-    <a
-      href="https://dl.flipkart.com/dl/bigbull-rolling-paper/p/itm26f6911508fa3?pid=RLPHP75VHZHYHNHH"
-      target="_blank"
-      rel="noopener noreferrer"
-    className="online-order-btn flipkart-order"
-  >
-    <span className="order-icon">🛍️</span>
-  
-      Flipkart
-    </a>
-
-    <a
-      href="https://www.meesho.com/BIGBULLPAPERINDUSTRIES"
-      target="_blank"
-      rel="noopener noreferrer"
-    className="online-order-btn meesho-order"
-  >
-    <span className="order-icon">🛍️</span>
-  
-      Meesho
-    </a>
-
-    <a
-      href="https://www.instagram.com/bigbullindustriesofficial"
-      target="_blank"
-    rel="noopener noreferrer"
-    className="online-order-btn instagram-order"
-  >
-    <span className="order-icon">◎</span>
-
-      Instagram
-    </a>
-  </div>
-</section>
-
-
+ 
 <section
   id="contact"
   style={{
