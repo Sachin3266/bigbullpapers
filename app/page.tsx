@@ -473,7 +473,7 @@ export default function Home() {
         View Product
       </a>
     </div>
-
+<div style={{ background: "#1a1a1a", padding: "30px", borderRadius: "15px" }}>
      <section style={{ textAlign: "center", padding: "60px 20px" }}>
   <h2>Order Online</h2>
 
